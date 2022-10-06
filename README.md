@@ -9,4 +9,7 @@ Consider the case where you want to talk about the politics. Let say there are t
 
 The network is generated from Erdős–Rényi model.
 
+## The goal
+
+The goal here is to create an integer (or mixed integer) programming that solve the strategy where we want to maximize the expected spreading of the edges. Yes, this model is stochastic so we need to add "expected" as a prefix.
 
