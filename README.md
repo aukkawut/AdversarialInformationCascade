@@ -21,6 +21,7 @@ The method here is quite cheating if you asked me. The project is required you t
 
 Ok, think of this as playing game with the probability that we will win, they will win, and we all tie. If that game is not favorable to us (i.e., the chance of us winning is less than the chance that they are winning), we would not play that game. The same way here, we prune the edges that is not favorable to us and find the node that provide the maximum expected flow given the pruned graph. That should be it. Again, I might be dumb dumb here to not understand it or put it in the math form.
 
+## Reference
 
 ```
 [1] Wu, H.-H., and Küçükyavuz, S. A two-stage stochastic programming approach for influence maximization in social networks. 
