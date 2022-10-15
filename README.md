@@ -17,6 +17,11 @@ The goal here is to create an integer (or mixed integer) programming that solve 
 
 The method here is quite cheating if you asked me. The project is required you to use some sort of programming (as an optimization) but I use the library for doing the task. Anyways, this one exploit the concept from the stochastic programming in influence maximization [1]. Where there is no cost for picking the node so it would be purely stochastic (i.e., purely recourse) which I approximate the probability measure with the similar idea to the reinforcement learning: setup one policy (random policy) and explore the game to estimate the measure itself. Then, we use this to prune out the network. (i.e., remove edge that we are quite certain, given the finite simulation, that we will lose). Now, as suggested by [1], this problem now is the max flow problem. that is, we perform max flow after the pruning to get the network such that we have the high chance that we can spread to estimate the expected win.
 
+## Intuitive Rationale behind it
+
+Ok, think of this as playing game with the probability that we will win, they will win, and we all tie. If that game is not favorable to us (i.e., the chance of us winning is less than the chance that they are winning), we would not play that game. The same way here, we prune the edges that is not favorable to us and find the node that provide the maximum expected flow given the pruned graph. That should be it. Again, I might be dumb dumb here to not understand it or put it in the math form.
+
+
 ```
 [1] Wu, H.-H., and Küçükyavuz, S. A two-stage stochastic programming approach for influence maximization in social networks. 
 Computational Optimization and Applications 69, 3 (Apr 2018), 563–595.
